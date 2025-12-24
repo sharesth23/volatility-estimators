@@ -28,3 +28,14 @@ pc1_series = pd.Series(
 )
 
 pc1_series.name = "Systemic_Risk_PC1"
+
+# =========================
+# 4. Structural break detection
+# =========================
+break_indices = detect_structural_breaks(pc1_series, penalty=10)
+
+break_dates = pc1_series.index[break_indices[:-1]]  # exclude last index
+
+print("\nDetected structural breaks:")
+for d in break_dates:
+    print(d.date())
