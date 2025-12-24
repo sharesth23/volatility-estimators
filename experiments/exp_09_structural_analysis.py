@@ -39,3 +39,24 @@ break_dates = pc1_series.index[break_indices[:-1]]  # exclude last index
 print("\nDetected structural breaks:")
 for d in break_dates:
     print(d.date())
+
+
+# =========================
+# 5. Visualization
+# =========================
+plt.figure(figsize=(10, 5))
+pc1_series.plot(label="Systemic Risk (PC1)")
+
+for d in break_dates:
+    plt.axvline(d, color="red", linestyle="--", alpha=0.7)
+
+plt.title("Structural Breaks in Cross-Asset Systemic Risk")
+plt.ylabel("PC1 Explained Variance")
+plt.legend()
+plt.tight_layout()
+
+plt.savefig(
+    "paper/figures/fig_structural_breaks.png",
+    dpi=300
+)
+plt.show()
