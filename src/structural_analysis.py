@@ -1,7 +1,3 @@
-"""
-Structural break detection for systemic risk metrics.
-"""
-
 import ruptures as rpt
 
 
