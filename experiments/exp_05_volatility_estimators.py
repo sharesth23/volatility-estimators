@@ -1,11 +1,3 @@
-"""
-Experiment 05
--------------
-Volatility estimator comparison.
-
-Reproduces Figure 5 in the research paper.
-"""
-
 import matplotlib.pyplot as plt
 
 from data.tickers import ASSETS
