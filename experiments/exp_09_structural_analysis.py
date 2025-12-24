@@ -60,3 +60,16 @@ plt.savefig(
     dpi=300
 )
 plt.show()
+
+# =========================
+# 6. Pre/Post regime comparison
+# =========================
+if len(break_dates) > 0:
+    split_date = break_dates[0]
+
+    pre_regime = pc1_series.loc[:split_date]
+    post_regime = pc1_series.loc[split_date:]
+
+    print("\nRegime statistics:")
+    print(f"Pre-break mean PC1  : {pre_regime.mean():.3f}")
+    print(f"Post-break mean PC1 : {post_regime.mean():.3f}")
