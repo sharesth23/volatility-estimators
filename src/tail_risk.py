@@ -1,12 +1,3 @@
-"""
-Tail risk estimators used in risk management.
-
-Implements:
-- Historical VaR
-- Historical Expected Shortfall
-- Gaussian VaR / ES
-"""
-
 import numpy as np
 from scipy.stats import norm
 import pandas as pd
